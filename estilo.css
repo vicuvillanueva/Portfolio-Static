@@ -1,0 +1,206 @@
+/* --------------------------------------------------
+   TIPOGRAFÍAS
+-------------------------------------------------- */
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0a0a0a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------
+   PALETA “STRAWBERRY LEMONADE HOLOGRÁFICO”
+-------------------------------------------------- */
+
+:root {
+  --pink: #ff6fbb;
+  --lemon: #f8ff70;
+  --holo-1: #ff9cff;
+  --holo-2: #a5f6ff;
+  --holo-3: #ffe1ff;
+  --soft-dark: #111;
+  --gradient-holo: linear-gradient(
+    135deg,
+    var(--pink) 0%,
+    var(--lemon) 25%,
+    var(--holo-1) 50%,
+    var(--holo-2) 75%,
+    var(--holo-3) 100%
+  );
+}
+
+/* Brillo holográfico suave */
+.holo-glow {
+  background: var(--gradient-holo);
+  -webkit-background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 12px rgba(255, 180, 255, 0.45));
+}
+
+/* --------------------------------------------------
+   HEADER + NAV
+-------------------------------------------------- */
+
+header {
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--holo-3);
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--lemon);
+  text-shadow: 0 0 8px rgba(255, 255, 140, 0.7);
+}
+
+/* --------------------------------------------------
+   HERO
+-------------------------------------------------- */
+
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.45;
+  filter: brightness(0.8) saturate(1.2);
+}
+
+.hero-text {
+  position: absolute;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: var(--pink);
+  text-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+}
+
+.hero-text h2 {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  color: var(--lemon);
+  text-shadow: 0 0 18px rgba(255, 255, 120, 0.6);
+}
+
+/* --------------------------------------------------
+   SECTION CARDS (MÚSICA - VIDEOS - SOBRE MÍ)
+-------------------------------------------------- */
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.section-card {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.35s;
+  backdrop-filter: blur(4px);
+}
+
+.section-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.section-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 18px rgba(255, 140, 255, 0.35);
+}
+
+.section-info {
+  padding: 1.3rem;
+}
+
+.section-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.7rem;
+  color: var(--pink);
+}
+
+.section-info p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+/* --------------------------------------------------
+   PÁGINAS INTERNAS
+-------------------------------------------------- */
+
+.page {
+  padding: 4rem 2rem;
+  max-width: 750px;
+  margin: auto;
+}
+
+.page h1 {
+  font-size: 3rem;
+  color: var(--holo-1);
+  margin-bottom: 1.5rem;
+}
+
+.page p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
+footer {
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.65;
+  margin-top: 4rem;
+}
